@@ -1,0 +1,15 @@
+/**
+ * ClassName:${NAME}
+ * Package:
+ * Author:@Wyh
+ */// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
+public class Main {
+    public static void main(String[] args) {
+        int[] arr={1,2,3,4};
+        int[] arr2;
+        arr2 =new int[]{4,2};
+
+
+        }
+    }
