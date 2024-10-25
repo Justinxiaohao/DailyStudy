@@ -10,5 +10,8 @@ public class overload {
     public static void sum(double a,int b){
         System.out.println(a+b);
     }
+    public static void sum(int a,double b){
+        System.out.println(a+b);
+    }
 
 }

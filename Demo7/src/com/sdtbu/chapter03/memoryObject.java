@@ -5,7 +5,6 @@ package com.sdtbu.chapter03;
 public class memoryObject {
     public static void main(String[] args) {
         Phone phone = new Phone();
-
         System.out.println(phone);
         System.out.println(phone.band);
         System.out.println(phone.color);
