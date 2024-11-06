@@ -23,8 +23,8 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public Result<User> registController(@RequestBody User newUser) {
-        User user = userService.registService(newUser);
+    public Result<User> registController(@RequestParam String uname, @RequestParam String password){
+        User user = userService.registService(uname, password);
         if (user != null) {
             return Result.success(user, "注册成功！");
         } else {
