@@ -13,5 +13,8 @@ public class Fu {
     {
         System.out.println("我是父类show2方法");
     }
+    public Fu method03(){
+        return null;
+    }
 
 }
