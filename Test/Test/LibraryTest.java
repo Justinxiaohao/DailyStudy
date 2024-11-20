@@ -1,13 +1,17 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class LibraryTest {
+public class LibraryTest{
     private Library library;
 
     @Before
@@ -62,4 +66,20 @@ public class LibraryTest {
             throw new RuntimeException(e);
         }
     }
-}
+
+        private Library library1;
+        private final PrintStream standardOut = System.out;
+        private final InputStream standardIn = System.in;
+        private ByteArrayOutputStream outputStream;
+
+        @Before
+        public void setUp1() {
+            library = new Library();
+            outputStream = new ByteArrayOutputStream();
+            System.setOut(new PrintStream(outputStream));
+        }
+
+
+
+    }
+
