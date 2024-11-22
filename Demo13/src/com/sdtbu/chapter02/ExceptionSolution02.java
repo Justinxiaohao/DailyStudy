@@ -1,14 +1,31 @@
 package com.sdtbu.chapter02;
+/*
+try{
+    可能出现异常的代码
+}catch(异常 对象名){
+    处理异常的代码
+}
+catch(异常 对象名){
+    处理异常的代码
+}
 
+
+ */
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 //1.throws 异常
 //在方法参数和方法体中
-public class ExceptionSolution {
+public class ExceptionSolution02 {
     public static void main(String[] args) throws IOException {
-        String str = "123";
-        add(str);
+        String str = "11111111";
+        try{
+            add(str);
+        }catch (FileNotFoundException e){
+            System.out.println(e);
+        } catch (IOException e){
+            System.out.println(e);
+        }
         detele(str);
         update(str);
         query(str);
