@@ -21,10 +21,10 @@ public class ExceptionSolution02 {
         String str = "11111111";
         try{
             add(str);
-        }catch (FileNotFoundException e){
-            System.out.println(e);
+
         } catch (IOException e){
             System.out.println(e);
+            e.printStackTrace();
         }
         detele(str);
         update(str);
