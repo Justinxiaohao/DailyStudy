@@ -5,10 +5,12 @@ package com.sdtbu.chapter01;
 //并行：多个CPU同时处理多个指令，例如三个厨师同时做菜
 
 public class Demo01 extends Thread{
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Demo01 d1=new Demo01();
+        d1.setName("线程1");
         d1.start();
         for (int i = 0; i < 10; i++) {
+            Thread.sleep(1000);
             System.out.println(Thread.currentThread().getName()+"执行了第"+i+"次");
         }
 
@@ -17,6 +19,11 @@ public class Demo01 extends Thread{
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(Thread.currentThread().getName()+"执行了第"+i+"次");
         }
     }
